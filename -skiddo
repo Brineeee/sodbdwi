@@ -1,0 +1,84 @@
+-- Library//
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatek/ProjectTerm/main/newlib.lua"))() 
+
+-- Tabs//
+
+local Main = Library:Create("Zees Tool","v3")
+local Tab1 = Main:MakeTab("Home")
+local Tab2 = Main:MakeTab("Farm")
+
+-- Home//
+
+Tab1:Button("GUI : ProjectTerm // Scriptor : mech#0945", function()
+    setclipboard("Thank you for using ZeesTool")
+end)
+
+Tab1:Button("Follow // Tiktok!", function()
+    setclipboard("tpsx_wars // tpsx_wars2")
+end)
+
+Tab1:Button("Join // Discord!", function()
+    setclipboard("https://discord.gg/pupUqEPMbz")
+end)
+
+Tab1:Button("Subscribe // Youtube!", function()
+    setclipboard("https://m.youtube.com/channel/UCtFpQclgHautRZAbHq3G_XA")
+end)
+
+-- KAT//
+
+Tab2:Button("Afk Farm", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zZgwT0n3"))()
+end) 
+
+Tab2:Button("Inf Jump", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab2:Button("Green Ballon", function()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "ZeesTool";
+    Text = "GreenBalloon is only can Clone.";
+    Icon = "rbxthumb://type=Asset&id=9477295944&w=150&h=150";
+    Duration = 1;
+})
+    local player = tostring(game.Players.LocalPlayer.Name)
+while true do
+if game.Workspace:FindFirstChild("GreenBalloon") then
+if not game.Workspace[player]:FindFirstChild("GreenBalloon") and not game.Players.LocalPlayer.Backpack:FindFirstChild("GreenBalloon") then
+local workspaceClone = game.Workspace.GreenBalloon:Clone()
+workspaceClone.Parent = game.Workspace[player]
+end
+else
+local balloonCheck = game.Workspace:GetDescendants()
+local balloonClone
+for i, balloon in ipairs(balloonCheck) do
+if (tostring(balloon.Name) == "GreenBalloon") then
+balloonClone = balloon:Clone()
+wait()
+end
+end
+balloonClone.Parent = game.Workspace
+local workspaceClone = game.Workspace.GreenBalloon:Clone()
+workspaceClone.Parent = game.Workspace[player]
+end
+wait()
+end
+end)
+
+Tab2:Button("Remove Fall Damage", function()
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v.Name == "FallDamageScript" then
+				v:Remove()
+			end
+		end
+	end)
